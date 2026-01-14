@@ -111,7 +111,7 @@
   .card-service {
     @apply relative bg-gradient-to-b from-charcoal-light to-charcoal 
            border border-border/30 rounded-2xl p-8
-           transition-all duration-500 ease-out group
+           transition-all duration-500 ease-out
            hover:border-primary/40;
   }
 
