@@ -1,18 +1,13 @@
 import { ArrowRight } from 'lucide-react';
 import heroBg from '@/assets/hero-bg.jpg';
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      <div className="absolute inset-0 z-0" style={{
+      backgroundImage: `url(${heroBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
       </div>
@@ -22,8 +17,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
           <div className="animate-fade-up opacity-0 mb-8">
-            <span className="badge-premium">
-              <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+            <span className="badge-premium">Cabinet de conseil spécialisé dans les appels d'offres<span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               Cabinet de conseil premium
             </span>
           </div>
@@ -60,8 +54,6 @@ const HeroSection = () => {
           <div className="w-1 h-2 bg-primary rounded-full" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
