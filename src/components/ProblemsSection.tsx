@@ -4,23 +4,23 @@ import { AlertTriangle, Clock, Users, FileX } from 'lucide-react';
 const problems = [
   {
     icon: AlertTriangle,
-    title: "Manque de visibilité",
-    description: "Vous passez à côté d'appels d'offres stratégiques faute d'une veille efficace.",
+    title: "Veille non exhaustive",
+    description: "Sans outils IA adaptés, vous passez à côté d'appels d'offres stratégiques invisibles sur les canaux traditionnels.",
   },
   {
     icon: Clock,
-    title: "Délais non tenus",
-    description: "Les échéances sont serrées et la pression compromet la qualité de vos réponses.",
+    title: "Pression des délais",
+    description: "Les échéances serrées et le manque d'automatisation compromettent la qualité de vos réponses.",
   },
   {
     icon: Users,
     title: "Coordination difficile",
-    description: "Vos équipes travaillent en silo et l'information circule mal entre les contributeurs.",
+    description: "Vos équipes travaillent en silo sans outils collaboratifs intelligents pour fluidifier les échanges.",
   },
   {
     icon: FileX,
-    title: "Propositions peu impactantes",
-    description: "Vos offres manquent de différenciation et ne valorisent pas votre expertise.",
+    title: "Professionnalisation de vos concurrents",
+    description: "Vos concurrents utilisent déjà l'IA pour produire des offres différenciantes pendant que vous restez sur des méthodes traditionnelles.",
   },
 ];
 

@@ -26,8 +26,8 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="body-lg max-w-xl mb-12 animate-fade-up opacity-0 animation-delay-200">
-            HACKIFY vous accompagne sur toute la chaîne de valeur des appels d'offres. 
-            Du sourcing à la victoire, nous transformons vos opportunités en succès.
+            HACKIFY combine expertise humaine et intelligence artificielle pour vous accompagner 
+            sur toute la chaîne de valeur des appels d'offres. Du sourcing IA à la victoire.
           </p>
 
           {/* CTA Buttons */}

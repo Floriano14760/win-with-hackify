@@ -4,23 +4,23 @@ import { Target, Settings, Palette, GraduationCap } from 'lucide-react';
 const solutions = [
   {
     icon: Target,
-    title: "Sourcing intelligent",
-    description: "Identification et qualification des appels d'offres à fort potentiel adaptés à votre stratégie.",
+    title: "Sourcing IA",
+    description: "Notre IA identifie et qualifie les appels d'offres à fort potentiel adaptés à votre stratégie.",
   },
   {
     icon: Settings,
-    title: "Pilotage structuré",
-    description: "Gouvernance, coordination et suivi rigoureux de chaque réponse jusqu'au dépôt.",
+    title: "Pilotage augmenté",
+    description: "Gouvernance assistée par IA pour coordonner efficacement chaque réponse jusqu'au dépôt.",
   },
   {
     icon: Palette,
-    title: "Propositions impactantes",
-    description: "Transformation de vos contenus en offres claires, lisibles et différenciantes.",
+    title: "Design IA-powered",
+    description: "Création de propositions visuellement impactantes avec assistance IA générative.",
   },
   {
     icon: GraduationCap,
-    title: "Montée en compétence",
-    description: "Formation de vos équipes pour autonomiser et pérenniser votre succès.",
+    title: "Formation IA",
+    description: "Maîtrise des outils IA pour autonomiser vos équipes et pérenniser votre succès.",
   },
 ];
 
