@@ -1,14 +1,13 @@
 import { ArrowRight } from 'lucide-react';
-
 const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Spline 3D Background */}
       <div className="absolute inset-0 z-0">
         {/* @ts-ignore */}
-        <spline-viewer 
-          url="https://prod.spline.design/nmRtFZuGzAn4LB4O/scene.splinecode"
-          style={{ width: '100%', height: '100%' }}
-        />
+        <spline-viewer url="https://prod.spline.design/nmRtFZuGzAn4LB4O/scene.splinecode" style={{
+        width: '100%',
+        height: '100%'
+      }} />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background pointer-events-none" />
       </div>
