@@ -17,7 +17,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
           <div className="animate-fade-up opacity-0 mb-8">
-            <span className="badge-premium">Cabinet de conseil spécialisé dans les appels d'offres<span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+            <span className="badge-premium">Cabinet de conseil spécialisé en appels d'offres<span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               Cabinet de conseil premium
             </span>
           </div>
