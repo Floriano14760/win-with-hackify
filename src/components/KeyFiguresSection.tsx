@@ -34,6 +34,16 @@ const KeyFiguresSection = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
+        <div className="text-center mb-16">
+          <span className="text-primary font-medium uppercase tracking-wider text-sm mb-4 block">
+            Nos résultats
+          </span>
+          <h2 className={`headline-lg max-w-3xl mx-auto transition-all duration-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
+            Des <span className="text-gradient-orange">chiffres clés</span> qui parlent
+          </h2>
+        </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {figures.map((figure, index) => (
             <div

@@ -15,7 +15,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: '#services', label: 'Services' },
+    { href: '/sourcing', label: 'Sourcing' },
+    { href: '/pmo', label: 'PMO' },
+    { href: '/design', label: 'Design' },
+    { href: '/hackademy', label: 'Hackademy' },
     { href: '#contact', label: 'Contact' },
   ];
 
