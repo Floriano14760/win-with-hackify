@@ -1,90 +1,45 @@
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Target, Settings, Palette, GraduationCap } from 'lucide-react';
+import { Features } from '@/components/ui/features';
 
-const solutions = [
+const features = [
   {
+    id: 1,
     icon: Target,
     title: "Sourcing IA",
     description: "Notre IA identifie et qualifie les appels d'offres à fort potentiel adaptés à votre stratégie.",
+    image: "/placeholder.svg",
   },
   {
+    id: 2,
     icon: Settings,
     title: "Pilotage augmenté",
     description: "Gouvernance assistée par IA pour coordonner efficacement chaque réponse jusqu'au dépôt.",
+    image: "/placeholder.svg",
   },
   {
+    id: 3,
     icon: Palette,
     title: "Design IA-powered",
     description: "Création de propositions visuellement impactantes avec assistance IA générative.",
+    image: "/placeholder.svg",
   },
   {
+    id: 4,
     icon: GraduationCap,
     title: "Formation IA",
     description: "Maîtrise des outils IA pour autonomiser vos équipes et pérenniser votre succès.",
+    image: "/placeholder.svg",
   },
 ];
 
 const SolutionSection = () => {
-  const { ref, isVisible } = useScrollAnimation();
-
   return (
-    <section className="section-padding bg-card relative overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
-      
-      <div className="section-container relative z-10" ref={ref}>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left content */}
-          <div>
-            <span className="text-primary font-medium uppercase tracking-wider text-sm mb-4 block">
-              La solution
-            </span>
-            <h2 className={`headline-lg mb-6 transition-all duration-700 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}>
-              HACKIFY, votre allié <span className="text-gradient-orange">stratégique</span>
-            </h2>
-            <p className={`body-lg mb-8 transition-all duration-700 delay-100 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}>
-              Nous prenons en charge l'intégralité de la chaîne de valeur des appels d'offres, 
-              du sourcing à la formation de vos équipes. Notre approche end-to-end vous garantit 
-              des résultats mesurables.
-            </p>
-            <div className={`transition-all duration-700 delay-200 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}>
-              <a href="#services" className="btn-primary">
-                Explorer nos expertises
-              </a>
-            </div>
-          </div>
-
-          {/* Right grid */}
-          <div className="grid sm:grid-cols-2 gap-4">
-            {solutions.map((solution, index) => (
-              <div
-                key={solution.title}
-                className={`card-service transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
-                style={{ transitionDelay: `${(index + 2) * 100}ms` }}
-              >
-                <div className="w-12 h-12 mb-4 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <solution.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-display text-lg font-semibold mb-2 text-foreground">
-                  {solution.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {solution.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+    <Features
+      features={features}
+      title="HACKIFY, votre allié stratégique"
+      subtitle="Nous prenons en charge l'intégralité de la chaîne de valeur des appels d'offres, du sourcing à la formation de vos équipes."
+      label="La solution"
+    />
   );
 };
 
