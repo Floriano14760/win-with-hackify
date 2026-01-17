@@ -8,8 +8,7 @@ const HeroSection = () => {
   return (
     <Hero
       trustBadge={{
-        text: "Cabinet de conseil en appels d'offres",
-        icons: ["📋", "🎯", "✅"]
+        text: "Cabinet de conseil en appels d'offres"
       }}
       headline={{
         line1: "From sourcing",
