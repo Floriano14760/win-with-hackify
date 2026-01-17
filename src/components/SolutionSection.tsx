@@ -1,33 +1,40 @@
-import { Target, Settings, Palette, GraduationCap } from 'lucide-react';
+import { Search, Briefcase, PenTool, Database, GraduationCap } from 'lucide-react';
 import { Features } from '@/components/ui/features';
 
 const features = [
   {
     id: 1,
-    icon: Target,
-    title: "Sourcing IA",
-    description: "Notre IA identifie et qualifie les appels d'offres à fort potentiel adaptés à votre stratégie.",
+    icon: Search,
+    title: "Sourcing d'appels d'offres",
+    description: "Identification ciblée des AO pertinents, qualification des opportunités et priorisation selon les chances de gain.",
     image: "/placeholder.svg",
   },
   {
     id: 2,
-    icon: Settings,
-    title: "Pilotage augmenté",
-    description: "Gouvernance assistée par IA pour coordonner efficacement chaque réponse jusqu'au dépôt.",
+    icon: Briefcase,
+    title: "Bid Management & PMO",
+    description: "Gouvernance et pilotage global, rétroplanning, coordination des contributeurs et assurance qualité.",
     image: "/placeholder.svg",
   },
   {
     id: 3,
-    icon: Palette,
-    title: "Design IA-powered",
-    description: "Création de propositions visuellement impactantes avec assistance IA générative.",
+    icon: PenTool,
+    title: "Design & Impact",
+    description: "Direction artistique premium, structuration des messages et mise en page professionnelle.",
     image: "/placeholder.svg",
   },
   {
     id: 4,
+    icon: Database,
+    title: "Knowledge Management",
+    description: "Templates réutilisables, capitalisation des contenus et industrialisation des process AO.",
+    image: "/placeholder.svg",
+  },
+  {
+    id: 5,
     icon: GraduationCap,
-    title: "Formation IA",
-    description: "Maîtrise des outils IA pour autonomiser vos équipes et pérenniser votre succès.",
+    title: "Hackify Academy",
+    description: "Formation des équipes (Assistantes, Marketing, Commerciaux) et coaching sur mesure.",
     image: "/placeholder.svg",
   },
 ];
@@ -36,9 +43,9 @@ const SolutionSection = () => {
   return (
     <Features
       features={features}
-      title="HACKIFY, votre allié stratégique"
+      title="Des services premium pour chaque étape"
       subtitle="Nous prenons en charge l'intégralité de la chaîne de valeur des appels d'offres, du sourcing à la formation de vos équipes."
-      label="La solution"
+      label="Nos expertises"
     />
   );
 };

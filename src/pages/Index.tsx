@@ -4,7 +4,6 @@ import TrustSection from "@/components/TrustSection";
 import FeaturedSectionStats from "@/components/ui/featured-section-stats";
 import ProblemsSection from "@/components/ProblemsSection";
 import SolutionSection from "@/components/SolutionSection";
-import ServicesSection from "@/components/ServicesSection";
 import TargetSection from "@/components/TargetSection";
 import WhySection from "@/components/WhySection";
 import ProcessSection from "@/components/ProcessSection";
@@ -21,7 +20,6 @@ const Index = () => {
       <FeaturedSectionStats />
       <ProblemsSection />
       <SolutionSection />
-      <ServicesSection />
       <TargetSection />
       <WhySection />
       <ProcessSection />
