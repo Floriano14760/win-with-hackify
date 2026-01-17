@@ -16,10 +16,6 @@ const advantages = [{
   icon: CheckCircle2,
   title: "Méthodologie éprouvée",
   description: "Des process testés sur des centaines d'appels d'offres."
-}, {
-  icon: Award,
-  title: "Positionnement premium",
-  description: "Nous intervenons sur les enjeux stratégiques, pas les tâches courantes."
 }];
 const WhySection = () => {
   const {
