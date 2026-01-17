@@ -15,7 +15,7 @@ const problems = [
   {
     icon: Users,
     title: "Coordination difficile",
-    description: "Vos équipes travaillent en silo sans outils collaboratifs intelligents pour fluidifier les échanges.",
+    description: "Vos équipes travaillent en silo sans chef de projet dédié pour animer les échanges et la production",
   },
   {
     icon: FileX,
