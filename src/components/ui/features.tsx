@@ -112,54 +112,53 @@ export function Features({
                 >
                   {/* Feature Content */}
                   <div
-                    className={`p-5 rounded-xl border transition-all duration-300 ${
+                    className={`p-4 rounded-xl border transition-all duration-300 ${
                       isActive
                         ? "bg-primary/10 border-primary/30"
                         : "bg-card border-border hover:border-primary/20 hover:bg-muted/50"
                     }`}
                   >
-                    {/* Icon */}
-                    <div
-                      className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-colors ${
-                        isActive ? "bg-primary/20" : "bg-muted"
-                      }`}
-                    >
-                      <Icon
-                        className={`w-5 h-5 transition-colors ${
-                          isActive ? "text-primary" : "text-muted-foreground"
+                    {/* Header: Icon + Title on same line */}
+                    <div className="flex items-center gap-3 mb-2">
+                      <div
+                        className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${
+                          isActive ? "bg-primary/20" : "bg-muted"
                         }`}
-                      />
-                    </div>
-
-                    {/* Content */}
-                    <div>
+                      >
+                        <Icon
+                          className={`w-4 h-4 transition-colors ${
+                            isActive ? "text-primary" : "text-muted-foreground"
+                          }`}
+                        />
+                      </div>
                       <h3
-                        className={`font-display font-semibold mb-2 transition-colors ${
+                        className={`font-display font-semibold transition-colors ${
                           isActive ? "text-foreground" : "text-muted-foreground"
                         }`}
                       >
                         {feature.title}
                       </h3>
+                    </div>
 
-                      <p
-                        className={`text-sm leading-relaxed transition-colors ${
-                          isActive ? "text-muted-foreground" : "text-muted-foreground/70"
-                        }`}
-                      >
-                        {feature.description}
-                      </p>
+                    {/* Description */}
+                    <p
+                      className={`text-sm leading-relaxed transition-colors ${
+                        isActive ? "text-muted-foreground" : "text-muted-foreground/70"
+                      }`}
+                    >
+                      {feature.description}
+                    </p>
 
-                      {/* Progress Bar */}
-                      <div className="h-1 bg-muted rounded-full mt-4 overflow-hidden">
-                        {isActive && (
-                          <motion.div
-                            className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full"
-                            initial={{ width: 0 }}
-                            animate={{ width: `${progress}%` }}
-                            transition={{ duration: 0.1, ease: "linear" }}
-                          />
-                        )}
-                      </div>
+                    {/* Progress Bar */}
+                    <div className="h-1 bg-muted rounded-full mt-3 overflow-hidden">
+                      {isActive && (
+                        <motion.div
+                          className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full"
+                          initial={{ width: 0 }}
+                          animate={{ width: `${progress}%` }}
+                          transition={{ duration: 0.1, ease: "linear" }}
+                        />
+                      )}
                     </div>
                   </div>
                 </div>
