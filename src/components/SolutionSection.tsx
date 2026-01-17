@@ -43,7 +43,7 @@ const SolutionSection = () => {
   return (
     <Features
       features={features}
-      title="Des services premium pour chaque étape"
+      title="Nous prenons en charge l'intégralité de la chaîne de valeur des appels d'offres, du sourcing à la formation de vos équipes."
       subtitle="Nous prenons en charge l'intégralité de la chaîne de valeur des appels d'offres, du sourcing à la formation de vos équipes."
       label="Nos expertises"
     />
