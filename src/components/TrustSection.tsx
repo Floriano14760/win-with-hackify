@@ -11,9 +11,9 @@ const logos = [
 
 const TrustSection = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-black">
-      {/* Gradient radial overlay */}
-      <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_50%_80%_at_50%_100%,hsl(var(--primary)/0.3),transparent)]" />
+<section className="relative w-full overflow-hidden bg-black">
+      {/* Gradient radial overlay at top for smooth transition from Hero */}
+      <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,hsl(var(--primary)/0.15),transparent)]" />
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-lg py-20 md:py-28">
         <div className="relative z-10 flex flex-col items-center text-center px-4">

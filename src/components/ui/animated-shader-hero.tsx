@@ -458,6 +458,9 @@ const Hero: React.FC<HeroProps> = ({
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/50 z-10" />
       
+      {/* Gradient fade to black at bottom for smooth transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-black z-[15]" />
+      
       {/* Hero Content Overlay */}
       <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 text-center">
         {/* Trust Badge */}
