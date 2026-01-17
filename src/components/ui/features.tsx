@@ -64,8 +64,8 @@ export function Features({
             {label}
           </span>
           <h2 className="headline-lg mb-4">
-            {title.includes("stratégique") ? <>
-                HACKIFY, votre allié <span className="text-gradient-orange">stratégique</span>
+            {title.includes("l'intégralité") ? <>
+                Nous prenons en charge <span className="text-gradient-orange">l'intégralité de la chaîne de valeur</span> des appels d'offres, du sourcing à la formation de vos équipes.
               </> : title}
           </h2>
           
