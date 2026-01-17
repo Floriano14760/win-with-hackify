@@ -6,7 +6,7 @@ const features = [
     id: 1,
     icon: Search,
     title: "Sourcing d'appels d'offres",
-    description: "Identification ciblée des AO pertinents, qualification des opportunités et priorisation selon les chances de gain.",
+    description: "Vous recevez tous les matins des opportunités sur votre boîte mail.",
     image: "/placeholder.svg",
   },
   {
