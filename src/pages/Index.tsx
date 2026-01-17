@@ -9,7 +9,7 @@ import WhySection from "@/components/WhySection";
 import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
+import HoverFooter from "@/components/HoverFooter";
 
 const Index = () => {
   return (
@@ -25,7 +25,7 @@ const Index = () => {
       <ProcessSection />
       <TestimonialsSection />
       <CTASection />
-      <Footer />
+      <HoverFooter />
     </main>
   );
 };

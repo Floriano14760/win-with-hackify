@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import HoverFooter from '@/components/HoverFooter';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Search, Zap, Target, Brain, ArrowRight } from 'lucide-react';
 
@@ -79,7 +79,7 @@ const Sourcing = () => {
         </div>
       </section>
 
-      <Footer />
+      <HoverFooter />
     </div>
   );
 };
