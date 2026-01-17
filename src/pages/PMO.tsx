@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import HoverFooter from '@/components/HoverFooter';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Briefcase, Users, Calendar, CheckCircle, ArrowRight, Cpu } from 'lucide-react';
 
@@ -83,7 +83,7 @@ const PMO = () => {
         </div>
       </section>
 
-      <Footer />
+      <HoverFooter />
     </div>
   );
 };

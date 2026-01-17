@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import HoverFooter from '@/components/HoverFooter';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { PenTool, Layout, Image, FileText, ArrowRight, Sparkles } from 'lucide-react';
 
@@ -78,7 +78,7 @@ const Design = () => {
         </div>
       </section>
 
-      <Footer />
+      <HoverFooter />
     </div>
   );
 };
