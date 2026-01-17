@@ -13,7 +13,7 @@ const features = [
     id: 2,
     icon: Briefcase,
     title: "Bid Management & PMO",
-    description: "Gouvernance et pilotage global, rétroplanning, coordination des contributeurs et assurance qualité.",
+    description: "Un chef de projet dédié vous accompagne sur la rédaction de votre mémoire technique, votre discours commercial et coordonne le process de réponse.",
     image: "/placeholder.svg",
   },
   {
