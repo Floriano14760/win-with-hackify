@@ -1,4 +1,4 @@
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { Sparkles } from "@/components/ui/sparkles";
 
 const logos = [
   { name: 'Capgemini', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/b/b5/Capgemini_Logo.svg/320px-Capgemini_Logo.svg.png' },
@@ -10,37 +10,55 @@ const logos = [
 ];
 
 const TrustSection = () => {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
-
   return (
-    <section className="py-16 bg-background border-t border-border/20">
-      <div 
-        ref={ref}
-        className={`section-container transition-all duration-700 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}
-      >
-        <p className="text-center text-muted-foreground mb-10 text-sm uppercase tracking-widest">
-          Ils nous font confiance
-        </p>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-          {logos.map((logo, index) => (
-            <div
-              key={logo.name}
-              className="group flex items-center justify-center h-12 w-full transition-all duration-300"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <img
-                src={logo.src}
-                alt={logo.name}
-                className="h-8 md:h-10 object-contain filter grayscale opacity-50 
-                           group-hover:grayscale-0 group-hover:opacity-100 
-                           transition-all duration-300"
-              />
-            </div>
-          ))}
+    <section className="relative w-full overflow-hidden bg-black">
+      {/* Gradient radial overlay */}
+      <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_50%_80%_at_50%_100%,hsl(var(--primary)/0.3),transparent)]" />
+
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-lg py-20 md:py-28">
+        <div className="relative z-10 flex flex-col items-center text-center px-4">
+          {/* Subtitle */}
+          <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+            Ils nous font confiance
+          </span>
+
+          {/* Main Title */}
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
+            Utilisé par les leaders du marché.
+          </h2>
+
+          {/* Logos Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12 items-center justify-items-center w-full max-w-5xl">
+            {logos.map((logo) => (
+              <div
+                key={logo.name}
+                className="group flex items-center justify-center h-16 w-full transition-all duration-300"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="h-8 md:h-10 object-contain brightness-0 invert opacity-60 
+                             group-hover:opacity-100 transition-all duration-300"
+                />
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Sparkles overlay */}
+        <div className="absolute inset-0 z-0">
+          <Sparkles
+            density={600}
+            speed={0.8}
+            size={1.2}
+            color="hsl(24, 95%, 53%)"
+            className="absolute inset-0 h-full w-full"
+          />
+        </div>
+
+        {/* Gradient lines */}
+        <div className="absolute inset-x-0 bottom-0 z-20 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 z-20 h-16 bg-gradient-to-t from-primary/10 to-transparent blur-xl" />
       </div>
     </section>
   );
