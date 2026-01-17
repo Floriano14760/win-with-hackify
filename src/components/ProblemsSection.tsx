@@ -20,7 +20,7 @@ const problems = [
   {
     icon: FileX,
     title: "Professionnalisation de vos concurrents",
-    description: "Vos concurrents utilisent déjà l'IA pour produire des offres différenciantes pendant que vous restez sur des méthodes traditionnelles.",
+    description: "Vos concurrents se professionnalisent et utilisent déjà l'IA pour produire des offres différenciantes.",
   },
 ];
 
