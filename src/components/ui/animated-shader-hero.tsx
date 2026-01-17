@@ -455,6 +455,9 @@ const Hero: React.FC<HeroProps> = ({
         style={{ touchAction: 'none' }}
       />
       
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/50 z-10" />
+      
       {/* Hero Content Overlay */}
       <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 text-center">
         {/* Trust Badge */}
