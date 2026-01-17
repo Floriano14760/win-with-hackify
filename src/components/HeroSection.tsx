@@ -10,8 +10,11 @@ const HeroSection = () => {
       trustBadge={{
         text: "Cabinet de conseil en appels d'offres"
       }}
-      headline="From sourcing to winning."
-      subtitle="Expertise humaine + IA pour gagner vos appels d'offres."
+      headline={{
+        line1: "From sourcing",
+        line2: "to winning."
+      }}
+      subtitle="HACKIFY combine expertise humaine et intelligence artificielle pour vous accompagner sur toute la chaîne de valeur des appels d'offres. Du sourcing IA à la victoire."
       buttons={{
         primary: {
           text: "Réserver un audit stratégique",
