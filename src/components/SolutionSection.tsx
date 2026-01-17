@@ -20,7 +20,7 @@ const features = [
     id: 3,
     icon: PenTool,
     title: "Design & Impact",
-    description: "Direction artistique premium, structuration des messages et mise en page professionnelle.",
+    description: "Une graphiste va structurer votre proposition commerciale pour structurer les messages et maximiser l'impact.",
     image: "/placeholder.svg",
   },
   {
