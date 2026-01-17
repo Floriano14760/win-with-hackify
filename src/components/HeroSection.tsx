@@ -8,8 +8,8 @@ const HeroSection = () => {
   return (
     <Hero
       trustBadge={{
-        text: "Powered by AI",
-        icons: ["🤖", "⚡", "🎯"]
+        text: "Cabinet de conseil en appels d'offres",
+        icons: ["📋", "🎯", "✅"]
       }}
       headline={{
         line1: "From sourcing",
