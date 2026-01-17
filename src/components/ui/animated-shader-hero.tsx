@@ -451,12 +451,12 @@ const Hero: React.FC<HeroProps> = ({
       
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full z-0"
         style={{ touchAction: 'none' }}
       />
       
       {/* Hero Content Overlay */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
+      <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 text-center">
         {/* Trust Badge */}
         {trustBadge && (
           <div className="animate-fade-in-down mb-8">
