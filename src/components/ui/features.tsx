@@ -91,7 +91,7 @@ export function Features({
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Features with Progress Lines */}
           <div
             ref={containerRef}
