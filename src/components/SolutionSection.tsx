@@ -33,7 +33,7 @@ const features = [
   {
     id: 5,
     icon: GraduationCap,
-    title: "Hackify Academy",
+    title: "Hackademy",
     description: "Formation des équipes (Assistantes, Marketing, Commerciaux) et coaching sur mesure.",
     image: "/placeholder.svg",
   },
