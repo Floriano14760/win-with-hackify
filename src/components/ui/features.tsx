@@ -62,30 +62,103 @@ export function Features({
 
       <div className="section-container relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <span className="text-primary font-medium uppercase tracking-wider text-sm mb-4 block">
             {label}
           </span>
-          <h2 className="headline-lg mb-4">
+          <h2 className="headline-lg mb-4 text-xl md:text-3xl lg:text-4xl leading-tight">
             {title.includes("l'intégralité") ? <>
                 Nous prenons en charge <span className="text-gradient-orange">l'intégralité de la chaîne de valeur</span> des appels d'offres, du sourcing à la formation de vos équipes.
               </> : title}
           </h2>
-          
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Side - Features with Progress Lines */}
-          <div ref={containerRef} className="flex lg:flex-col gap-4 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-hide">
-            {features.map((feature, index) => {
+        {/* Mobile Layout - Stacked cards */}
+        <div className="lg:hidden space-y-4">
+          {features.map((feature, index) => {
             const Icon = feature.icon;
             const isActive = currentFeature === index;
-            return <div key={feature.id} ref={el => {
-              featureRefs.current[index] = el;
-            }} className="relative cursor-pointer flex-shrink-0 min-w-[280px] lg:min-w-0" onClick={() => handleFeatureClick(index)}>
-                  {/* Feature Content */}
+            return (
+              <div 
+                key={feature.id}
+                ref={el => { featureRefs.current[index] = el; }}
+                className="cursor-pointer"
+                onClick={() => handleFeatureClick(index)}
+              >
+                <div className={`p-4 rounded-xl border transition-all duration-300 ${isActive ? "bg-primary/10 border-primary/30" : "bg-card border-border"}`}>
+                  {/* Header: Icon + Title */}
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${isActive ? "bg-primary/20" : "bg-muted"}`}>
+                      <Icon className={`w-4 h-4 transition-colors ${isActive ? "text-primary" : "text-muted-foreground"}`} />
+                    </div>
+                    <h3 className={`font-display font-semibold text-sm transition-colors ${isActive ? "text-foreground" : "text-muted-foreground"}`}>
+                      {feature.title}
+                    </h3>
+                  </div>
+
+                  {/* Description - only show when active */}
+                  {isActive && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <p className="text-sm leading-relaxed text-muted-foreground mb-3">
+                        {feature.description}
+                      </p>
+                      
+                      {/* Visual component for active feature */}
+                      <div className="aspect-video rounded-lg overflow-hidden bg-muted border border-border">
+                        {feature.component ? (
+                          <motion.div
+                            className="w-full h-full flex items-center justify-center p-2"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            {feature.component}
+                          </motion.div>
+                        ) : (
+                          <img
+                            src={feature.image}
+                            alt={feature.title}
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                      </div>
+
+                      {/* Progress Bar */}
+                      <div className="h-1 bg-muted rounded-full mt-3 overflow-hidden">
+                        <motion.div 
+                          className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full"
+                          initial={{ width: 0 }}
+                          animate={{ width: `${progress}%` }}
+                          transition={{ duration: 0.1, ease: "linear" }}
+                        />
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Desktop Layout - Side by side */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Side - Features with Progress Lines */}
+          <div ref={containerRef} className="flex flex-col gap-4">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              const isActive = currentFeature === index;
+              return (
+                <div 
+                  key={feature.id} 
+                  ref={el => { featureRefs.current[index] = el; }} 
+                  className="relative cursor-pointer"
+                  onClick={() => handleFeatureClick(index)}
+                >
                   <div className={`p-4 rounded-xl border transition-all duration-300 ${isActive ? "bg-primary/10 border-primary/30" : "bg-card border-border hover:border-primary/20 hover:bg-muted/50"}`}>
-                    {/* Header: Icon + Title on same line */}
                     <div className="flex items-center gap-3 mb-2">
                       <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${isActive ? "bg-primary/20" : "bg-muted"}`}>
                         <Icon className={`w-4 h-4 transition-colors ${isActive ? "text-primary" : "text-muted-foreground"}`} />
@@ -94,26 +167,23 @@ export function Features({
                         {feature.title}
                       </h3>
                     </div>
-
-                    {/* Description */}
                     <p className={`text-sm leading-relaxed transition-colors ${isActive ? "text-muted-foreground" : "text-muted-foreground/70"}`}>
                       {feature.description}
                     </p>
-
-                    {/* Progress Bar */}
                     <div className="h-1 bg-muted rounded-full mt-3 overflow-hidden">
-                      {isActive && <motion.div className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full" initial={{
-                    width: 0
-                  }} animate={{
-                    width: `${progress}%`
-                  }} transition={{
-                    duration: 0.1,
-                    ease: "linear"
-                  }} />}
+                      {isActive && (
+                        <motion.div 
+                          className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full" 
+                          initial={{ width: 0 }}
+                          animate={{ width: `${progress}%` }}
+                          transition={{ duration: 0.1, ease: "linear" }}
+                        />
+                      )}
                     </div>
                   </div>
-                </div>;
-          })}
+                </div>
+              );
+            })}
           </div>
 
           {/* Right Side - Image or Component Display */}
@@ -139,7 +209,6 @@ export function Features({
                 transition={{ duration: 0.5, ease: "easeOut" }}
               />
             )}
-            {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none" />
           </div>
         </div>
