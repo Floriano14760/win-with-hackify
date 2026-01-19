@@ -1,12 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+
 interface Feature {
   id: number;
   icon: React.ElementType;
   title: string;
   description: string;
-  image: string;
+  image?: string;
+  component?: React.ReactNode;
 }
+
 interface FeaturesProps {
   features: Feature[];
   title?: string;
@@ -113,20 +116,31 @@ export function Features({
           })}
           </div>
 
-          {/* Right Side - Image Display */}
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-muted border border-border">
-            <motion.img key={currentFeature} src={features[currentFeature].image} alt={features[currentFeature].title} className="w-full h-full object-cover" initial={{
-            opacity: 0,
-            scale: 1.05
-          }} animate={{
-            opacity: 1,
-            scale: 1
-          }} transition={{
-            duration: 0.5,
-            ease: "easeOut"
-          }} />
+          {/* Right Side - Image or Component Display */}
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-muted border border-border flex items-center justify-center">
+            {features[currentFeature].component ? (
+              <motion.div
+                key={currentFeature}
+                className="w-full h-full flex items-center justify-center p-4"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
+                {features[currentFeature].component}
+              </motion.div>
+            ) : (
+              <motion.img
+                key={currentFeature}
+                src={features[currentFeature].image}
+                alt={features[currentFeature].title}
+                className="w-full h-full object-cover"
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              />
+            )}
             {/* Overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none" />
           </div>
         </div>
       </div>

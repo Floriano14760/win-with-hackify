@@ -1,5 +1,6 @@
 import { Search, Briefcase, PenTool, Database, GraduationCap } from 'lucide-react';
 import { Features } from '@/components/ui/features';
+import TenderNotifications from '@/components/ui/tender-notifications';
 
 const features = [
   {
@@ -7,7 +8,7 @@ const features = [
     icon: Search,
     title: "Sourcing d'appels d'offres",
     description: "Vous recevez tous les matins des opportunités sur votre boîte mail.",
-    image: "/placeholder.svg",
+    component: <TenderNotifications />,
   },
   {
     id: 2,
