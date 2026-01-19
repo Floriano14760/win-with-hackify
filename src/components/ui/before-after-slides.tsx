@@ -1,17 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Sparkles } from "lucide-react";
 
 export default function BeforeAfterSlides() {
   const [showAfter, setShowAfter] = useState(false);
 
+  // Auto-toggle every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowAfter((prev) => !prev);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div
       className="w-full h-full flex items-center justify-center p-4 cursor-pointer"
-      onMouseEnter={() => setShowAfter(true)}
-      onMouseLeave={() => setShowAfter(false)}
       onClick={() => setShowAfter(!showAfter)}
     >
       <div className="relative w-full max-w-[480px]">
@@ -149,9 +155,20 @@ export default function BeforeAfterSlides() {
           {showAfter ? "APRÈS ✨" : "AVANT"}
         </div>
 
-        {/* Hover hint */}
-        <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-[10px] text-muted-foreground">
-          Survolez pour voir la transformation
+        {/* Progress indicator */}
+        <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2">
+          <div
+            className={cn(
+              "w-2 h-2 rounded-full transition-all duration-300",
+              !showAfter ? "bg-red-500 scale-110" : "bg-muted-foreground/30"
+            )}
+          />
+          <div
+            className={cn(
+              "w-2 h-2 rounded-full transition-all duration-300",
+              showAfter ? "bg-primary scale-110" : "bg-muted-foreground/30"
+            )}
+          />
         </div>
       </div>
     </div>
