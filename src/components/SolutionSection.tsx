@@ -1,6 +1,7 @@
 import { Search, Briefcase, PenTool, Database, GraduationCap } from 'lucide-react';
 import { Features } from '@/components/ui/features';
 import TenderNotifications from '@/components/ui/tender-notifications';
+import BeforeAfterSlides from '@/components/ui/before-after-slides';
 
 const features = [
   {
@@ -22,7 +23,7 @@ const features = [
     icon: PenTool,
     title: "Design & Impact",
     description: "Une graphiste va structurer votre proposition commerciale pour structurer les messages et maximiser l'impact.",
-    image: "/placeholder.svg",
+    component: <BeforeAfterSlides />,
   },
   {
     id: 4,
