@@ -4,6 +4,7 @@ import TenderNotifications from '@/components/ui/tender-notifications';
 import BeforeAfterSlides from '@/components/ui/before-after-slides';
 import BidTimeline from '@/components/ui/bid-timeline';
 import KnowledgeCycle from '@/components/ui/knowledge-cycle';
+import HackademyVisual from '@/components/ui/hackademy-visual';
 
 const features = [
   {
@@ -39,7 +40,7 @@ const features = [
     icon: GraduationCap,
     title: "Hackademy",
     description: "Formation des équipes (Assistantes, Marketing, Commerciaux) et coaching sur mesure.",
-    image: "/placeholder.svg",
+    component: <HackademyVisual />,
   },
 ];
 
