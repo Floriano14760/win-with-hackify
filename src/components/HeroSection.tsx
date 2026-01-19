@@ -18,7 +18,7 @@ const HeroSection = () => {
       buttons={{
         primary: {
           text: "Réserver un audit stratégique",
-          onClick: () => scrollToSection('contact')
+          href: "https://calendly.com/hackifyao"
         },
         secondary: {
           text: "Découvrir nos services",

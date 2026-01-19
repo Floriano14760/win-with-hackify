@@ -34,7 +34,9 @@ const CTASection = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <a 
-              href="mailto:contact@hackify.fr" 
+              href="https://calendly.com/hackifyao" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary group text-lg"
             >
               <Calendar className="w-5 h-5" />
