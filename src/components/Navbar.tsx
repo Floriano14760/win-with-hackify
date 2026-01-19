@@ -27,7 +27,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={hackifyLogo} alt="Hackify" className="h-10 w-auto" />
+            <img src={hackifyLogo} alt="Hackify" className="h-14 w-auto mix-blend-lighten" />
           </a>
 
           {/* Desktop Navigation */}
