@@ -116,7 +116,7 @@ function TimelineCard({
       onMouseLeave={onLeave}
       onClick={onTap}
       className={cn(
-        "relative flex flex-col w-[280px] sm:w-[380px] rounded-2xl border border-border bg-card/90 backdrop-blur-sm p-3 sm:p-4 transition-all duration-500 hover:border-primary/30 hover:bg-card cursor-pointer select-none",
+        "relative flex flex-col w-[320px] sm:w-[460px] rounded-2xl border border-border bg-card/90 backdrop-blur-sm p-3 sm:p-4 transition-all duration-500 hover:border-primary/30 hover:bg-card cursor-pointer select-none",
         isActive && "ring-2 ring-primary/50",
         className
       )}
