@@ -47,6 +47,7 @@ const TrustSection = () => {
                   className={`object-contain grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 ${
                     logo.name === 'Colliers' ? 'h-20 md:h-28 opacity-70' : 
                     logo.name === 'JLL' ? 'h-10 md:h-14 opacity-90 brightness-150' :
+                    logo.name === 'CBRE' ? 'h-8 md:h-12 opacity-90 brightness-125' :
                     'h-14 md:h-20 opacity-90 brightness-125'
                   }`}
                 />
