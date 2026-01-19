@@ -29,20 +29,16 @@ const TrustSection = () => {
           </h2>
 
           {/* Logos Grid */}
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 w-full max-w-5xl">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 w-full max-w-5xl">
             {logos.map((logo) => (
               <div
                 key={logo.name}
-                className="group flex items-center justify-center h-12 transition-all duration-300"
+                className="group flex items-center justify-center h-20 transition-all duration-300"
               >
                 <img
                   src={logo.src}
                   alt={logo.name}
-                  className={`h-8 md:h-10 object-contain transition-all duration-300 ${
-                    logo.invert 
-                      ? 'brightness-0 invert opacity-60 group-hover:opacity-100' 
-                      : 'opacity-80 group-hover:opacity-100'
-                  }`}
+                  className="h-14 md:h-20 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
                 />
               </div>
             ))}
