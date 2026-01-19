@@ -52,10 +52,11 @@ export const TextHoverEffect = ({
         >
           {hovered && (
             <>
-              <stop offset="0%" stopColor="hsl(0, 85%, 55%)" />
-              <stop offset="33%" stopColor="hsl(30, 100%, 55%)" />
-              <stop offset="66%" stopColor="hsl(35, 100%, 60%)" />
-              <stop offset="100%" stopColor="hsl(220, 90%, 55%)" />
+              <stop offset="0%" stopColor="hsl(var(--primary))" />
+              <stop offset="25%" stopColor="hsl(var(--primary))" />
+              <stop offset="50%" stopColor="hsl(25, 95%, 53%)" />
+              <stop offset="75%" stopColor="hsl(var(--primary))" />
+              <stop offset="100%" stopColor="hsl(var(--primary))" />
             </>
           )}
         </linearGradient>
@@ -129,9 +130,8 @@ export const TextHoverEffect = ({
 export const FooterBackgroundGradient = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[hsl(0_85%_55%/0.08)] rounded-full blur-3xl" />
-      <div className="absolute -bottom-20 left-1/3 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[hsl(220_90%_55%/0.08)] rounded-full blur-3xl" />
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
     </div>
   );
 };

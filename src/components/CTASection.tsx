@@ -6,12 +6,8 @@ const CTASection = () => {
 
   return (
     <section id="contact" className="section-padding bg-background relative overflow-hidden">
-      {/* Background brand blur gradients */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-[hsl(0_85%_55%/0.1)] rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/15 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[hsl(220_90%_55%/0.1)] rounded-full blur-3xl" />
-      </div>
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
       
       <div className="section-container relative z-10" ref={ref}>
         <div className="max-w-3xl mx-auto text-center">

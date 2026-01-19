@@ -22,7 +22,7 @@ const WhySection = () => {
     ref,
     isVisible
   } = useScrollAnimation();
-  return <section id="why" className="section-padding bg-background relative">
+  return <section className="section-padding bg-background relative">
       <div className="section-container" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}

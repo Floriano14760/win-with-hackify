@@ -11,12 +11,12 @@ const logos = [
 
 const TrustSection = () => {
   return (
-<section className="relative w-full overflow-hidden bg-background">
+<section className="relative w-full overflow-hidden bg-black">
       {/* Dark transparent overlay at top for smooth transition */}
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/80 to-transparent z-10" />
       
-      {/* Gradient radial overlay with brand colors */}
-      <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,hsl(30_100%_55%/0.1),transparent)]" />
+      {/* Gradient radial overlay at top for smooth transition from Hero */}
+      <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,hsl(var(--primary)/0.15),transparent)]" />
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-lg py-20 md:py-28">
         <div className="relative z-10 flex flex-col items-center text-center px-4">
@@ -48,13 +48,13 @@ const TrustSection = () => {
           </div>
         </div>
 
-        {/* Sparkles overlay with brand colors */}
+        {/* Sparkles overlay */}
         <div className="absolute inset-0 z-0">
           <Sparkles
             density={600}
             speed={0.8}
             size={1.2}
-            color="hsl(30, 100%, 55%)"
+            color="hsl(24, 95%, 53%)"
             className="absolute inset-0 h-full w-full"
           />
         </div>
