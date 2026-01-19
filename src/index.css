@@ -2,62 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* HACKIFY Premium Design System */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+/* HACKIFY Premium Design System - Brand Kit */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 0 0% 3%;
+    /* Core Brand Colors - Deep Black Theme */
+    --background: 0 0% 2%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 6%;
+    --card: 0 0% 5%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 6%;
+    --popover: 0 0% 5%;
     --popover-foreground: 0 0% 98%;
 
-    /* Premium Orange - Signature Accent */
-    --primary: 24 95% 53%;
+    /* Primary Orange - Signature Brand Color */
+    --primary: 30 100% 55%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Subtle Gray */
-    --secondary: 0 0% 12%;
+    /* Secondary - Warm Orange */
+    --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 90%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 24 95% 53%;
+    --accent: 30 100% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 24 95% 53%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 30 100% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Extended Palette */
-    --orange-glow: 24 100% 60%;
-    --orange-dark: 24 90% 45%;
-    --charcoal: 0 0% 8%;
-    --charcoal-light: 0 0% 12%;
-    --text-muted: 0 0% 55%;
+    /* Extended Hackify Palette */
+    --orange-glow: 35 100% 60%;
+    --orange-dark: 25 100% 45%;
+    --red-accent: 0 85% 55%;
+    --blue-accent: 220 90% 55%;
+    --charcoal: 0 0% 6%;
+    --charcoal-light: 0 0% 10%;
+    --text-muted: 0 0% 50%;
     --white-pure: 0 0% 100%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 8%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 5%) 100%);
-    --gradient-orange: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(30 100% 45%) 100%);
-    --gradient-text: linear-gradient(90deg, hsl(0 0% 100%) 0%, hsl(0 0% 80%) 100%);
+    /* Brand Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 5%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 6%) 0%, hsl(0 0% 3%) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(0 85% 55%) 0%, hsl(30 100% 55%) 50%, hsl(220 90% 55%) 100%);
+    --gradient-text: linear-gradient(90deg, hsl(0 0% 100%) 0%, hsl(0 0% 75%) 100%);
 
-    /* Shadows */
-    --shadow-glow: 0 0 60px -15px hsl(24 95% 53% / 0.3);
-    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
-    --shadow-subtle: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    /* Premium Shadows */
+    --shadow-glow: 0 0 80px -20px hsl(30 100% 55% / 0.4);
+    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.6);
+    --shadow-subtle: 0 4px 24px -4px hsl(0 0% 0% / 0.4);
   }
 
   * {
@@ -74,7 +76,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', system-ui, sans-serif;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
   }
 }
 
@@ -218,7 +220,30 @@
   }
 
   .text-gradient-orange {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[hsl(30_100%_60%)];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(35_100%_60%)] to-primary;
+  }
+
+  .text-gradient-brand {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(0 85% 55%) 0%, hsl(30 100% 55%) 50%, hsl(220 90% 55%) 100%);
+  }
+
+  /* Brand Blur Gradient Background */
+  .bg-brand-blur {
+    position: relative;
+  }
+
+  .bg-brand-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 40% at 20% 30%, hsl(0 85% 55% / 0.3), transparent 60%),
+      radial-gradient(ellipse 50% 50% at 80% 60%, hsl(220 90% 55% / 0.25), transparent 50%),
+      radial-gradient(ellipse 40% 35% at 50% 50%, hsl(30 100% 55% / 0.2), transparent 50%);
+    filter: blur(60px);
+    z-index: 0;
+    pointer-events: none;
   }
 }
 
