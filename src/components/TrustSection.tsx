@@ -3,14 +3,14 @@ import logoForvisMazars from "@/assets/logo-forvis-mazars.png";
 import logoColliers from "@/assets/logo-colliers.png";
 
 const logos = [
-  { name: 'Capgemini', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/b/b5/Capgemini_Logo.svg/320px-Capgemini_Logo.svg.png' },
-  { name: 'Sopra Steria', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/5/59/Sopra_Steria_logo.svg/320px-Sopra_Steria_logo.svg.png' },
-  { name: 'Atos', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Atos_logo_%282017%29.svg/320px-Atos_logo_%282017%29.svg.png' },
-  { name: 'Accenture', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/320px-Accenture.svg.png' },
-  { name: 'CGI', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/CGI_logo.svg/320px-CGI_logo.svg.png' },
-  { name: 'Alten', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/a/a1/Logo_Alten.svg/320px-Logo_Alten.svg.png' },
-  { name: 'Forvis Mazars', src: logoForvisMazars },
-  { name: 'Colliers International', src: logoColliers },
+  { name: 'Capgemini', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/b/b5/Capgemini_Logo.svg/320px-Capgemini_Logo.svg.png', invert: true },
+  { name: 'Sopra Steria', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/5/59/Sopra_Steria_logo.svg/320px-Sopra_Steria_logo.svg.png', invert: true },
+  { name: 'Atos', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Atos_logo_%282017%29.svg/320px-Atos_logo_%282017%29.svg.png', invert: true },
+  { name: 'Accenture', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/320px-Accenture.svg.png', invert: true },
+  { name: 'CGI', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/CGI_logo.svg/320px-CGI_logo.svg.png', invert: true },
+  { name: 'Alten', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/a/a1/Logo_Alten.svg/320px-Logo_Alten.svg.png', invert: true },
+  { name: 'Forvis Mazars', src: logoForvisMazars, invert: false },
+  { name: 'Colliers', src: logoColliers, invert: false },
 ];
 
 const TrustSection = () => {
@@ -35,17 +35,20 @@ const TrustSection = () => {
           </h2>
 
           {/* Logos Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8 items-center justify-items-center w-full max-w-6xl">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 w-full max-w-5xl">
             {logos.map((logo) => (
               <div
                 key={logo.name}
-                className="group flex items-center justify-center h-16 w-full transition-all duration-300"
+                className="group flex items-center justify-center h-12 transition-all duration-300"
               >
                 <img
                   src={logo.src}
                   alt={logo.name}
-                  className="h-8 md:h-10 object-contain brightness-0 invert opacity-60 
-                             group-hover:opacity-100 transition-all duration-300"
+                  className={`h-8 md:h-10 object-contain transition-all duration-300 ${
+                    logo.invert 
+                      ? 'brightness-0 invert opacity-60 group-hover:opacity-100' 
+                      : 'opacity-80 group-hover:opacity-100'
+                  }`}
                 />
               </div>
             ))}
