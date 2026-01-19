@@ -38,8 +38,8 @@ const TrustSection = () => {
                 <img
                   src={logo.src}
                   alt={logo.name}
-                  className={`object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 ${
-                    logo.name === 'Colliers' ? 'h-20 md:h-28' : 'h-14 md:h-20'
+                  className={`object-contain grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 ${
+                    logo.name === 'Colliers' ? 'h-20 md:h-28 opacity-70' : 'h-14 md:h-20 opacity-90 brightness-125'
                   }`}
                 />
               </div>
