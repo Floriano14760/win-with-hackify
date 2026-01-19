@@ -3,7 +3,7 @@ import logoForvisMazars from "@/assets/logo-forvis-mazars.png";
 import logoColliers from "@/assets/logo-colliers.png";
 import logoNuklear from "@/assets/logo-nuklear.png";
 import logoCbre from "@/assets/logo-cbre.png";
-import logoJll from "@/assets/logo-jll.svg";
+import logoJll from "@/assets/logo-jll.png";
 
 const logos = [
   { name: 'Forvis Mazars', src: logoForvisMazars },
