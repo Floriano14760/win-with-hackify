@@ -23,7 +23,7 @@ const stats = [
     label: "de taux de gain",
   },
   {
-    value: "+100M€",
+    value: "+400M€",
     label: "gagnés pour nos clients",
   },
 ];
