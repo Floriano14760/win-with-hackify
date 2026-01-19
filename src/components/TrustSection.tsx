@@ -2,11 +2,15 @@ import { Sparkles } from "@/components/ui/sparkles";
 import logoForvisMazars from "@/assets/logo-forvis-mazars.png";
 import logoColliers from "@/assets/logo-colliers.png";
 import logoNuklear from "@/assets/logo-nuklear.png";
+import logoCbre from "@/assets/logo-cbre.png";
+import logoJll from "@/assets/logo-jll.svg";
 
 const logos = [
-  { name: 'Forvis Mazars', src: logoForvisMazars, invert: false },
-  { name: 'Colliers', src: logoColliers, invert: false },
-  { name: 'Nuklear', src: logoNuklear, invert: false },
+  { name: 'Forvis Mazars', src: logoForvisMazars },
+  { name: 'Colliers', src: logoColliers },
+  { name: 'Nuklear', src: logoNuklear },
+  { name: 'CBRE', src: logoCbre },
+  { name: 'JLL', src: logoJll },
 ];
 
 const TrustSection = () => {
@@ -41,7 +45,9 @@ const TrustSection = () => {
                   src={logo.src}
                   alt={logo.name}
                   className={`object-contain grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 ${
-                    logo.name === 'Colliers' ? 'h-20 md:h-28 opacity-70' : 'h-14 md:h-20 opacity-90 brightness-125'
+                    logo.name === 'Colliers' ? 'h-20 md:h-28 opacity-70' : 
+                    logo.name === 'JLL' ? 'h-10 md:h-14 opacity-90 brightness-150' :
+                    'h-14 md:h-20 opacity-90 brightness-125'
                   }`}
                 />
               </div>
