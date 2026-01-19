@@ -4,7 +4,6 @@ import logoColliers from "@/assets/logo-colliers.png";
 import logoNuklear from "@/assets/logo-nuklear.png";
 import logoCbre from "@/assets/logo-cbre.png";
 import logoJll from "@/assets/logo-jll.png";
-import logoSerenity from "@/assets/logo-serenity.png";
 
 const logos = [
   { name: 'Forvis Mazars', src: logoForvisMazars },
@@ -12,7 +11,6 @@ const logos = [
   { name: 'Nuklear', src: logoNuklear },
   { name: 'CBRE', src: logoCbre },
   { name: 'JLL', src: logoJll },
-  { name: 'Serenity Advertising', src: logoSerenity },
 ];
 
 const TrustSection = () => {
