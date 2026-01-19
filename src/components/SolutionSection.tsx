@@ -3,6 +3,7 @@ import { Features } from '@/components/ui/features';
 import TenderNotifications from '@/components/ui/tender-notifications';
 import BeforeAfterSlides from '@/components/ui/before-after-slides';
 import BidTimeline from '@/components/ui/bid-timeline';
+import KnowledgeCycle from '@/components/ui/knowledge-cycle';
 
 const features = [
   {
@@ -31,7 +32,7 @@ const features = [
     icon: Database,
     title: "Knowledge Management",
     description: "Templates réutilisables, capitalisation des contenus et industrialisation des process AO.",
-    image: "/placeholder.svg",
+    component: <KnowledgeCycle />,
   },
   {
     id: 5,
