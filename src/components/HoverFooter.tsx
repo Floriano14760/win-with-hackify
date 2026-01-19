@@ -35,9 +35,9 @@ const structuredData = {
   "@type": "ProfessionalService",
   "name": "HACKIFY",
   "description": "Cabinet de conseil spécialisé dans l'accompagnement aux appels d'offres et marchés publics. Sourcing, bid management, design de propositions commerciales et formation.",
-  "url": "https://hackify.fr",
-  "logo": "https://hackify.fr/logo.png",
-  "image": "https://hackify.fr/og-image.jpg",
+  "url": "https://www.hackify.fr",
+  "logo": "https://www.hackify.fr/logo.png",
+  "image": "https://www.hackify.fr/og-image.jpg",
   "telephone": contactInfo.phone,
   "email": contactInfo.email,
   "address": {
