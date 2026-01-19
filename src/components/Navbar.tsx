@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import hackifyLogo from '@/assets/hackify-logo.jpeg';
+import hackifyLogo from '@/assets/hackify-logo.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +27,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={hackifyLogo} alt="Hackify" className="h-14 w-auto mix-blend-lighten" />
+            <img src={hackifyLogo} alt="Hackify" className="h-28 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
