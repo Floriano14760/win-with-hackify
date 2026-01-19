@@ -30,7 +30,7 @@ const CTASection = () => {
             les leviers d'amélioration de votre performance AO.
           </p>
 
-          <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 delay-300 ${
+          <div className={`flex flex-col items-center justify-center gap-2 transition-all duration-700 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <a 
@@ -41,6 +41,7 @@ const CTASection = () => {
               Planifier un échange stratégique
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
+            <span className="text-xs text-muted-foreground uppercase tracking-wider">Confidentiel</span>
           </div>
 
           <p className={`mt-8 text-sm text-muted-foreground transition-all duration-700 delay-400 ${
