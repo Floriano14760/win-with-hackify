@@ -1,8 +1,24 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { ArrowRight, Calendar } from 'lucide-react';
+import { useEffect } from 'react';
 
 const CTASection = () => {
   const { ref, isVisible } = useScrollAnimation();
+
+  useEffect(() => {
+    // Load Calendly widget script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   return (
     <section id="contact" className="section-padding bg-background relative overflow-hidden">
@@ -10,7 +26,7 @@ const CTASection = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
       
       <div className="section-container relative z-10" ref={ref}>
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <span className={`text-primary font-medium uppercase tracking-wider text-sm mb-4 block transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
@@ -30,19 +46,15 @@ const CTASection = () => {
             les leviers d'amélioration de votre performance AO.
           </p>
 
-          <div className={`flex flex-col items-center justify-center gap-2 transition-all duration-700 delay-300 ${
+          {/* Calendly Inline Widget */}
+          <div className={`transition-all duration-700 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            <a 
-              href="https://calendly.com/hackifyao" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary group text-lg"
-            >
-              <Calendar className="w-5 h-5" />
-              Planifier un échange stratégique
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            <div 
+              className="calendly-inline-widget rounded-xl overflow-hidden border border-border/30 bg-card/50 backdrop-blur-sm" 
+              data-url="https://calendly.com/hackifyao?hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=f97316"
+              style={{ minWidth: '320px', height: '700px' }}
+            />
           </div>
 
           <p className={`mt-8 text-sm text-muted-foreground transition-all duration-700 delay-400 ${
