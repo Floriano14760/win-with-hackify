@@ -1,4 +1,6 @@
 import { Sparkles } from "@/components/ui/sparkles";
+import logoForvisMazars from "@/assets/logo-forvis-mazars.png";
+import logoColliers from "@/assets/logo-colliers.png";
 
 const logos = [
   { name: 'Capgemini', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/b/b5/Capgemini_Logo.svg/320px-Capgemini_Logo.svg.png' },
@@ -7,6 +9,8 @@ const logos = [
   { name: 'Accenture', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/320px-Accenture.svg.png' },
   { name: 'CGI', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/CGI_logo.svg/320px-CGI_logo.svg.png' },
   { name: 'Alten', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/a/a1/Logo_Alten.svg/320px-Logo_Alten.svg.png' },
+  { name: 'Forvis Mazars', src: logoForvisMazars },
+  { name: 'Colliers International', src: logoColliers },
 ];
 
 const TrustSection = () => {
@@ -31,7 +35,7 @@ const TrustSection = () => {
           </h2>
 
           {/* Logos Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12 items-center justify-items-center w-full max-w-5xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8 items-center justify-items-center w-full max-w-6xl">
             {logos.map((logo) => (
               <div
                 key={logo.name}
