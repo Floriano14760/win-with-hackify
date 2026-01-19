@@ -14,6 +14,7 @@ interface HeroProps {
     primary?: {
       text: string;
       onClick?: () => void;
+      href?: string;
     };
     secondary?: {
       text: string;
@@ -503,12 +504,23 @@ const Hero: React.FC<HeroProps> = ({
           {buttons && (
             <div className="animate-fade-in-up animation-delay-800 flex flex-col sm:flex-row items-center justify-center gap-4">
               {buttons.primary && (
-                <button
-                  onClick={buttons.primary.onClick}
-                  className="btn-primary group"
-                >
-                  {buttons.primary.text}
-                </button>
+                buttons.primary.href ? (
+                  <a
+                    href={buttons.primary.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary group"
+                  >
+                    {buttons.primary.text}
+                  </a>
+                ) : (
+                  <button
+                    onClick={buttons.primary.onClick}
+                    className="btn-primary group"
+                  >
+                    {buttons.primary.text}
+                  </button>
+                )
               )}
               {buttons.secondary && (
                 <button
