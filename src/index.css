@@ -8,13 +8,13 @@
 @layer base {
   :root {
     /* Core Brand Colors - Softer Dark Gray */
-    --background: 0 0% 10%;
+    --background: 0 0% 14%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 13%;
+    --card: 0 0% 17%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 13%;
+    --popover: 0 0% 17%;
     --popover-foreground: 0 0% 98%;
 
     /* Premium Orange - Signature Accent */
@@ -22,11 +22,11 @@
     --primary-foreground: 0 0% 100%;
 
     /* Secondary - Subtle Gray */
-    --secondary: 0 0% 18%;
+    --secondary: 0 0% 22%;
     --secondary-foreground: 0 0% 90%;
 
-    --muted: 0 0% 22%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 26%;
+    --muted-foreground: 0 0% 68%;
 
     --accent: 24 95% 53%;
     --accent-foreground: 0 0% 100%;
@@ -34,8 +34,8 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 22%;
-    --input: 0 0% 22%;
+    --border: 0 0% 26%;
+    --input: 0 0% 26%;
     --ring: 24 95% 53%;
 
     --radius: 0.5rem;
@@ -43,21 +43,21 @@
     /* Extended Palette */
     --orange-glow: 24 100% 60%;
     --orange-dark: 24 90% 45%;
-    --charcoal: 0 0% 14%;
-    --charcoal-light: 0 0% 18%;
-    --text-muted: 0 0% 60%;
+    --charcoal: 0 0% 18%;
+    --charcoal-light: 0 0% 22%;
+    --text-muted: 0 0% 62%;
     --white-pure: 0 0% 100%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 14%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 14%) 0%, hsl(0 0% 11%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 12%) 0%, hsl(0 0% 18%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 18%) 0%, hsl(0 0% 15%) 100%);
     --gradient-orange: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(30 100% 45%) 100%);
     --gradient-text: linear-gradient(90deg, hsl(0 0% 100%) 0%, hsl(0 0% 80%) 100%);
 
     /* Shadows */
     --shadow-glow: 0 0 60px -15px hsl(24 95% 53% / 0.3);
-    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.4);
-    --shadow-subtle: 0 4px 20px -4px hsl(0 0% 0% / 0.25);
+    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.35);
+    --shadow-subtle: 0 4px 20px -4px hsl(0 0% 0% / 0.2);
   }
 
   * {
