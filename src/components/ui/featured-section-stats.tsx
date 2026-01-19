@@ -66,21 +66,28 @@ export default function FeaturedSectionStats() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section className="relative py-16 md:py-20 bg-charcoal overflow-hidden">
+    <section id="results" className="relative py-16 md:py-20 bg-charcoal overflow-hidden">
+      {/* Brand blur gradient background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-20 -left-20 w-80 h-80 bg-[hsl(0_85%_55%/0.08)] rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[hsl(220_90%_55%/0.08)] rounded-full blur-3xl" />
+      </div>
+
       {/* Background Chart */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
+      <div className="absolute inset-0 opacity-15 pointer-events-none">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={data}>
             <defs>
               <linearGradient id="colorValueBg" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.6} />
-                <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0} />
+                <stop offset="5%" stopColor="hsl(30, 100%, 55%)" stopOpacity={0.6} />
+                <stop offset="95%" stopColor="hsl(30, 100%, 55%)" stopOpacity={0} />
               </linearGradient>
             </defs>
             <Area
               type="monotone"
               dataKey="value"
-              stroke="hsl(var(--primary))"
+              stroke="hsl(30, 100%, 55%)"
               strokeWidth={2}
               fill="url(#colorValueBg)"
             />

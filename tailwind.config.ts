@@ -47,7 +47,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Extended HACKIFY palette
+        // Extended HACKIFY Brand palette
         charcoal: {
           DEFAULT: "hsl(var(--charcoal))",
           light: "hsl(var(--charcoal-light))",
@@ -56,10 +56,16 @@ export default {
           glow: "hsl(var(--orange-glow))",
           dark: "hsl(var(--orange-dark))",
         },
+        red: {
+          accent: "hsl(var(--red-accent))",
+        },
+        blue: {
+          accent: "hsl(var(--blue-accent))",
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Outfit', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

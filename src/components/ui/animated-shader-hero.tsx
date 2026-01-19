@@ -73,17 +73,29 @@ float clouds(vec2 p) {
 void main(void) {
   vec2 uv=(FC-.5*R)/MN,st=uv*vec2(2,1);
   vec3 col=vec3(0);
-  float bg=clouds(vec2(st.x+T*.5,-st.y));
-  uv*=1.-.3*(sin(T*.2)*.5+.5);
+  float bg=clouds(vec2(st.x+T*.3,-st.y));
+  uv*=1.-.3*(sin(T*.15)*.5+.5);
+  
   for (float i=1.; i<12.; i++) {
-    uv+=.1*cos(i*vec2(.1+.01*i, .8)+i*i+T*.5+.1*uv.x);
+    uv+=.1*cos(i*vec2(.1+.01*i, .8)+i*i+T*.4+.1*uv.x);
     vec2 p=uv;
     float d=length(p);
-    // Orange/amber color palette for HACKIFY
-    col+=.00125/d*(cos(sin(i)*vec3(1.0, 0.5, 0.1))+1.);
+    
+    // HACKIFY Brand Colors: Red, Orange, Blue gradient blur effect
+    vec3 redCol = vec3(0.85, 0.15, 0.1);    // Red accent
+    vec3 orangeCol = vec3(1.0, 0.55, 0.1);  // Orange brand
+    vec3 blueCol = vec3(0.2, 0.3, 0.9);     // Blue accent
+    
+    float colorMix = sin(i * 0.5 + T * 0.3) * 0.5 + 0.5;
+    float colorMix2 = cos(i * 0.7 + T * 0.2) * 0.5 + 0.5;
+    
+    vec3 dynamicColor = mix(redCol, orangeCol, colorMix);
+    dynamicColor = mix(dynamicColor, blueCol, colorMix2 * 0.4);
+    
+    col+=.0012/d*dynamicColor;
     float b=noise(i+p+bg*1.731);
     col+=.002*b/length(max(p,vec2(b*p.x*.02,p.y)));
-    col=mix(col,vec3(bg*.3,bg*.15,bg*.02),d);
+    col=mix(col,vec3(bg*.2,bg*.1,bg*.15),d);
   }
   O=vec4(col,1);
 }`;
