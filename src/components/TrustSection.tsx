@@ -1,12 +1,12 @@
 import { Sparkles } from "@/components/ui/sparkles";
 import logoForvisMazars from "@/assets/logo-forvis-mazars.png";
 import logoColliers from "@/assets/logo-colliers.png";
-import logoNotion from "@/assets/logo-notion.jpg";
+import logoNuklear from "@/assets/logo-nuklear.png";
 
 const logos = [
   { name: 'Forvis Mazars', src: logoForvisMazars, invert: false },
   { name: 'Colliers', src: logoColliers, invert: false },
-  { name: 'Notion', src: logoNotion, invert: false },
+  { name: 'Nuklear', src: logoNuklear, invert: false },
 ];
 
 const TrustSection = () => {
