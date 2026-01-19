@@ -3,12 +3,6 @@ import logoForvisMazars from "@/assets/logo-forvis-mazars.png";
 import logoColliers from "@/assets/logo-colliers.png";
 
 const logos = [
-  { name: 'Capgemini', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/b/b5/Capgemini_Logo.svg/320px-Capgemini_Logo.svg.png', invert: true },
-  { name: 'Sopra Steria', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/5/59/Sopra_Steria_logo.svg/320px-Sopra_Steria_logo.svg.png', invert: true },
-  { name: 'Atos', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Atos_logo_%282017%29.svg/320px-Atos_logo_%282017%29.svg.png', invert: true },
-  { name: 'Accenture', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/320px-Accenture.svg.png', invert: true },
-  { name: 'CGI', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/CGI_logo.svg/320px-CGI_logo.svg.png', invert: true },
-  { name: 'Alten', src: 'https://upload.wikimedia.org/wikipedia/fr/thumb/a/a1/Logo_Alten.svg/320px-Logo_Alten.svg.png', invert: true },
   { name: 'Forvis Mazars', src: logoForvisMazars, invert: false },
   { name: 'Colliers', src: logoColliers, invert: false },
 ];
