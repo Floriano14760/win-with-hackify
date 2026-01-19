@@ -13,44 +13,29 @@ const TargetSection = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="section-padding bg-card relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary rounded-full blur-3xl" />
-      </div>
-      
-      <div className="section-container relative z-10" ref={ref}>
-        <div className="text-center mb-16">
-          <span className="text-primary font-medium uppercase tracking-wider text-sm mb-4 block">
+    <section className="py-12 bg-background border-y border-white/5" ref={ref}>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+          <span className={`text-white/50 text-sm font-medium uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${
+            isVisible ? 'opacity-100' : 'opacity-0'
+          }`}>
             Pour qui ?
           </span>
-          <h2 className={`headline-lg max-w-3xl mx-auto transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            Des entreprises <span className="text-gradient-orange">ambitieuses</span>
-          </h2>
-          <p className={`body-lg max-w-2xl mx-auto mt-6 transition-all duration-700 delay-100 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            HACKIFY accompagne les organisations qui considèrent les appels d'offres 
-            comme un levier stratégique de croissance.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-4">
-          {targets.map((target, index) => (
-            <div
-              key={target.label}
-              className={`flex items-center gap-3 px-6 py-4 bg-secondary/50 border border-border/50 rounded-full
-                         hover:border-primary/40 hover:bg-secondary transition-all duration-300
-                         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: `${(index + 2) * 100}ms` }}
-            >
-              <target.icon className="w-5 h-5 text-primary" />
-              <span className="font-medium text-foreground">{target.label}</span>
-            </div>
-          ))}
+          
+          <div className="flex flex-wrap justify-center gap-3">
+            {targets.map((target, index) => (
+              <div
+                key={target.label}
+                className={`flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full
+                           hover:border-primary/40 hover:bg-white/10 transition-all duration-300
+                           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                style={{ transitionDelay: `${index * 75}ms` }}
+              >
+                <target.icon className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-white/80">{target.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
