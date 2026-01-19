@@ -218,56 +218,9 @@ function TimelineCard({
 }
 
 export default function BidTimeline() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const getCardClassName = (index: number, baseClassName: string) => {
-    const focusedIndex = hoveredIndex ?? activeIndex;
-
-    if (focusedIndex === 0 && index === 1) {
-      return baseClassName + " !translate-y-16 sm:!translate-y-24 !translate-x-10 sm:!translate-x-16";
-    }
-    if (focusedIndex === 0 && index === 2) {
-      return baseClassName + " !translate-y-24 sm:!translate-y-36 !translate-x-16 sm:!translate-x-28";
-    }
-    if (focusedIndex === 1 && index === 2) {
-      return baseClassName + " !translate-y-20 sm:!translate-y-32 !translate-x-16 sm:!translate-x-28";
-    }
-    return baseClassName;
-  };
-
-  const handleTap = (index: number) => {
-    if (activeIndex === index) return;
-    setActiveIndex(index);
-  };
-
-  const cards = [
-    {
-      className:
-        "[grid-area:stack] -skew-y-[6deg] hover:-translate-y-8 before:absolute before:w-full before:rounded-2xl before:outline-1 before:outline-border before:h-full before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[80%] hover:before:opacity-0 before:transition-opacity before:duration-500 hover:grayscale-0 before:left-0 before:top-0",
-    },
-    {
-      className:
-        "[grid-area:stack] -skew-y-[6deg] translate-x-6 sm:translate-x-12 translate-y-8 sm:translate-y-14 hover:-translate-y-2 before:absolute before:w-full before:rounded-2xl before:outline-1 before:outline-border before:h-full before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[60%] hover:before:opacity-0 before:transition-opacity before:duration-500 hover:grayscale-0 before:left-0 before:top-0",
-    },
-    {
-      className:
-        "[grid-area:stack] -skew-y-[6deg] translate-x-12 sm:translate-x-24 translate-y-16 sm:translate-y-28 hover:translate-y-10 sm:hover:translate-y-20",
-    },
-  ];
-
   return (
-    <div className="grid [grid-template-areas:'stack'] place-items-center opacity-100 animate-in fade-in-0 duration-700 py-4">
-      {cards.map((cardProps, index) => (
-        <TimelineCard
-          key={index}
-          className={getCardClassName(index, cardProps.className)}
-          onHover={() => setHoveredIndex(index)}
-          onLeave={() => setHoveredIndex(null)}
-          isActive={activeIndex === index}
-          onTap={() => handleTap(index)}
-        />
-      ))}
+    <div className="flex items-center justify-center w-full h-full p-4">
+      <TimelineCard className="w-full max-w-[380px]" />
     </div>
   );
 }
