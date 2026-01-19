@@ -2,6 +2,7 @@ import { Search, Briefcase, PenTool, Database, GraduationCap } from 'lucide-reac
 import { Features } from '@/components/ui/features';
 import TenderNotifications from '@/components/ui/tender-notifications';
 import BeforeAfterSlides from '@/components/ui/before-after-slides';
+import BidTimeline from '@/components/ui/bid-timeline';
 
 const features = [
   {
@@ -16,7 +17,7 @@ const features = [
     icon: Briefcase,
     title: "Bid Management & PMO",
     description: "Un chef de projet dédié vous accompagne sur la rédaction de votre mémoire technique, votre discours commercial et coordonne le process de réponse.",
-    image: "/placeholder.svg",
+    component: <BidTimeline />,
   },
   {
     id: 3,
